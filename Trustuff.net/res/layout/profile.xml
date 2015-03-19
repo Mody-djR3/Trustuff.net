@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:bootstrap="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" xmlns:app="http://schemas.android.com/apk/res/project.trustuff.net">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:background="#44423e" >
+
+<com.beardedhen.androidbootstrap.BootstrapCircleThumbnail
+    android:id="@+id/thumbnailOneTest"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_alignParentTop="true"
+    android:layout_centerInParent="true"
+    android:layout_marginTop="18dp"
+    bootstrap:bct_size="large"
+    bootstrap:bct_image="@drawable/trustuff_logo" />
+
+<TextView
+    android:id="@+id/profile_username"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_below="@+id/thumbnailOneTest"
+    android:layout_centerHorizontal="true"
+    android:text="Large Text"
+    android:textColor="#ff9e00"
+    android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    </RelativeLayout>
+
+</LinearLayout>

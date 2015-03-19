@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:bootstrapbutton="http://schemas.android.com/apk/res-auto"
+    xmlns:bootstrap="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" xmlns:app="http://schemas.android.com/apk/res/project.trustuff.net">
+    
+    
+
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center" >
+            
+          <ImageView
+              android:id="@+id/imageView1"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:layout_weight="0.00"
+              android:paddingBottom="15dp"
+              android:paddingTop="50dp"
+              android:src="@drawable/trustuff_logo" />
+
+            <TableRow
+                android:id="@+id/tableRow1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center" >
+
+                <com.beardedhen.androidbootstrap.BootstrapButton
+                    android:id="@+id/books"
+                    android:layout_width="135dp"
+                    android:layout_height="100dp"
+                    android:layout_margin="10dp"
+                    android:text="Books"
+                    bootstrap:bb_icon_left="fa-book"
+                    app:bb_text_alignment="center"
+                    android:textSize="20dp"
+                                  
+                    bootstrap:bb_type="warning" >
+                </com.beardedhen.androidbootstrap.BootstrapButton>
+
+                <com.beardedhen.androidbootstrap.BootstrapButton
+                    android:id="@+id/cars"
+                    android:layout_width="135dp"
+                    android:layout_height="100dp"
+                    android:layout_margin="10dp"
+                    android:text="Cars"
+                    android:textSize="20dp"
+                   	bootstrap:bb_icon_left="fa-car"
+                   	app:bb_text_alignment="center"
+                    bootstrap:bb_type="warning" >
+                </com.beardedhen.androidbootstrap.BootstrapButton>
+
+            </TableRow>
+
+            <TableRow
+                android:id="@+id/tableRow2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center" >
+
+                <com.beardedhen.androidbootstrap.BootstrapButton
+                    android:id="@+id/housing"
+                    android:layout_width="135dp"
+                    android:layout_height="100dp"
+                    android:layout_margin="10dp"
+                    android:text="Housing"
+                    bootstrap:bb_icon_left="fa-home"
+                    app:bb_text_alignment="center"
+                    android:textSize="20dp"
+                    
+                    bootstrap:bb_type="warning" >
+                </com.beardedhen.androidbootstrap.BootstrapButton>
+
+                <com.beardedhen.androidbootstrap.BootstrapButton
+                    android:id="@+id/other"
+                    android:layout_width="135dp"
+                    android:layout_height="100dp"
+                    android:layout_margin="10dp"
+                    android:text="Others"
+                    android:textSize="20dp"
+                    app:bb_text_alignment="center"
+                    bootstrap:bb_icon_left="fa-plus"
+                    bootstrap:bb_type="warning" >
+
+                </com.beardedhen.androidbootstrap.BootstrapButton>
+
+            </TableRow>
+        </TableLayout>
+
+</LinearLayout>

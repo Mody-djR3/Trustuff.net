@@ -1,0 +1,175 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:bootstrapbutton="http://schemas.android.com/apk/res-auto"
+    xmlns:bootstrap="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_weight="1"
+    android:background="#F0F8FF"
+    android:orientation="vertical"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="project.trustuff.net.Login" xmlns:app="http://schemas.android.com/apk/res/project.trustuff.net">
+
+<TabHost
+        android:id="@android:id/tabhost"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical" >
+
+            <TabWidget
+                android:id="@android:id/tabs"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="0"
+                android:tabStripEnabled="false" >
+
+            </TabWidget>
+
+            <FrameLayout
+                android:id="@android:id/tabcontent"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" >
+
+               <LinearLayout
+                    android:id="@+id/tab1"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical" >
+
+                    <ImageView
+                        android:id="@+id/imageView1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.00"
+                        android:paddingTop="50dp"
+                        android:src="@drawable/trustuff_logo" />
+				
+				    <com.beardedhen.androidbootstrap.BootstrapEditText
+				        android:id="@+id/username"
+				        android:layout_width="match_parent"
+				        android:layout_height="wrap_content"
+				        android:layout_margin="10dp"
+				        android:gravity="center"
+				        android:hint="Username"
+				        bootstrapbutton:bb_icon_left="fa-user"
+				        bootstrapbutton:be_roundedCorners="true"
+				        bootstrapbutton:be_state="warning" />
+				         
+				     <com.beardedhen.androidbootstrap.BootstrapEditText
+				         android:id="@+id/password"
+				         android:layout_width="match_parent"
+				         android:layout_height="wrap_content"
+				         android:layout_margin="10dp"
+				         android:gravity="center"
+				         android:hint="Password"
+				         
+				         bootstrapbutton:bb_icon_left="fa-lock"
+				         bootstrapbutton:be_roundedCorners="true"
+				         bootstrapbutton:be_state="warning" />
+
+				        <requestFocus />
+				 
+				    
+				    <com.beardedhen.androidbootstrap.BootstrapButton
+				        android:id="@+id/login"
+				        android:layout_width="match_parent"
+				        android:layout_height="wrap_content"
+				        android:layout_margin="10dp"
+				        android:text="Log in"
+				        bootstrapbutton:bb_icon_left="fa-unlock"
+				        bootstrapbutton:bb_type="warning" />
+
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/tab2"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical" >
+
+                    <ImageView
+                        android:id="@+id/imageView2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.00"
+                        android:paddingTop="50dp"
+                        android:src="@drawable/trustuff_logo" />
+				
+
+				    
+				     <com.beardedhen.androidbootstrap.BootstrapEditText
+				        android:id="@+id/regUsername"
+				        android:layout_width="match_parent"
+				        android:layout_height="wrap_content"
+				        android:layout_margin="10dp"
+				        android:gravity="center"
+				        android:hint="Username"
+				        bootstrapbutton:bb_icon_left="fa-user"
+				        bootstrapbutton:be_roundedCorners="true"
+				        bootstrapbutton:be_state="warning" />
+				
+
+				    
+				    <com.beardedhen.androidbootstrap.BootstrapEditText
+				        android:id="@+id/email"
+				        android:layout_width="match_parent"
+				        android:layout_height="wrap_content"
+				        android:layout_margin="10dp"
+				        android:gravity="center"
+				        android:hint="Email"
+				        bootstrapbutton:bb_icon_left="fa-at"
+				        bootstrapbutton:be_roundedCorners="true"
+				        bootstrapbutton:be_state="warning" />
+				
+
+				    
+				    <com.beardedhen.androidbootstrap.BootstrapEditText
+				        android:id="@+id/regPassword1"
+				        android:layout_width="match_parent"
+				        android:layout_height="wrap_content"
+				        android:layout_margin="10dp"
+				        android:gravity="center"
+				        android:hint="Password"
+				        bootstrapbutton:bb_icon_left="fa-lock"
+				        bootstrapbutton:be_roundedCorners="true"
+				        bootstrapbutton:be_state="warning" />
+				
+
+				    
+				    <com.beardedhen.androidbootstrap.BootstrapEditText
+				        android:id="@+id/regPassword2"
+				        android:layout_width="match_parent"
+				        android:layout_height="wrap_content"
+				        android:layout_margin="10dp"
+				        android:gravity="center"
+				        android:hint="Re-enter password"
+				        bootstrapbutton:bb_icon_left="fa-lock"
+				        bootstrapbutton:be_roundedCorners="true"
+				        bootstrapbutton:be_state="warning" />
+				    
+				   <com.beardedhen.androidbootstrap.BootstrapButton
+				       android:id="@+id/signup"
+				       android:layout_width="match_parent"
+				       android:layout_height="wrap_content"
+				       android:layout_margin="10dp"
+				       android:text="Sign Up"
+				       bootstrapbutton:bb_icon_left="fa-user-plus"
+				       bootstrapbutton:bb_type="warning" />
+			    
+                </LinearLayout>
+            </FrameLayout>
+        </LinearLayout>
+    </TabHost>
+
+</LinearLayout>

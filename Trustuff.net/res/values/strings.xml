@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Trustuff</string>
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_welcome">Trustuff</string>
+    <string name="title_activity_login">Trustuff</string>
+    <string name="fa_user">&#xf007;</string>
+
+</resources>
