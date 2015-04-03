@@ -12,7 +12,8 @@
         android:id="@+id/upImage"
         android:layout_width="160dp"
         android:layout_height="160dp"
-        android:layout_gravity="center" />
+        android:layout_gravity="center"
+        android:background="@drawable/trustuff_logo" />
 
     <TableLayout
         android:layout_width="match_parent"
