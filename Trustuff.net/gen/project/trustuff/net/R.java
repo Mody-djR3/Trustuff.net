@@ -1008,7 +1008,7 @@ containing a value of this type.
         public static final int abc_split_action_bar_is_narrow=0x7f0a0002;
     }
     public static final class color {
-        public static final int abc_search_url_text_holo=0x7f050036;
+        public static final int abc_search_url_text_holo=0x7f050037;
         public static final int abc_search_url_text_normal=0x7f050032;
         public static final int abc_search_url_text_pressed=0x7f050034;
         public static final int abc_search_url_text_selected=0x7f050033;
@@ -1063,6 +1063,7 @@ containing a value of this type.
         public static final int bthumbnail_placeholder=0x7f05002f;
         public static final int hint=0x7f050035;
         public static final int white=0x7f050000;
+        public static final int whitish=0x7f050036;
     }
     public static final class dimen {
         /**  Default height of an action bar. 

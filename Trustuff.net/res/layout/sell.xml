@@ -5,19 +5,14 @@
     xmlns:app="http://schemas.android.com/apk/res/project.trustuff.net"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/whitish"
     android:orientation="vertical" >
 
-    <com.beardedhen.androidbootstrap.BootstrapThumbnail
+    <ImageView
         android:id="@+id/upImage"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:layout_marginBottom="30dp"
-        android:onClick="imageClick"
-        app:bt_height="110dp"
-        app:bt_width="150dp" >
-
-    </com.beardedhen.androidbootstrap.BootstrapThumbnail>
+        android:layout_width="160dp"
+        android:layout_height="160dp"
+        android:layout_gravity="center" />
 
     <TableLayout
         android:layout_width="match_parent"
@@ -41,7 +36,7 @@
                 android:gravity="center"
                 android:hint="What&apos;s the item"
                 bootstrapbutton:be_roundedCorners="true"
-                bootstrapbutton:be_state="warning">
+                bootstrapbutton:be_state="warning" >
 
                 <requestFocus />
             </com.beardedhen.androidbootstrap.BootstrapEditText>
@@ -61,9 +56,9 @@
                 android:layout_gravity="center"
                 android:layout_margin="10dp"
                 android:ems="10"
-                android:inputType="textMultiLine"
-    			android:lines="5" 
                 android:hint="Descripe your item"
+                android:inputType="textMultiLine"
+                android:lines="5"
                 bootstrapbutton:be_roundedCorners="true"
                 bootstrapbutton:be_state="warning" />
         </TableRow>

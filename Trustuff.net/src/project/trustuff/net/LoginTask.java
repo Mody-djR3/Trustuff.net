@@ -147,6 +147,4 @@ public class LoginTask extends AsyncTask<String, String, Void>
             Log.e("log_tag", "Error parsing data "+e.toString());
         }
     }
-	
-
 }
