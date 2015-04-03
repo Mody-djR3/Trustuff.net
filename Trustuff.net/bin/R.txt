@@ -354,7 +354,8 @@ int drawable thumbnail_circle 0x7f02007f
 int drawable thumbnail_circle_container 0x7f020080
 int drawable thumbnail_circle_minimal 0x7f020081
 int drawable trustuff_logo 0x7f020082
-int drawable upload_photo_icon 0x7f020083
+int drawable upload_icon 0x7f020083
+int drawable upload_photo_icon 0x7f020084
 int id action_bar 0x7f09001c
 int id action_bar_activity_content 0x7f090015
 int id action_bar_container 0x7f09001b
@@ -366,7 +367,7 @@ int id action_context_bar 0x7f09001d
 int id action_menu_divider 0x7f090016
 int id action_menu_presenter 0x7f090017
 int id action_mode_close_button 0x7f090024
-int id action_settings 0x7f090063
+int id action_settings 0x7f090065
 int id activity_chooser_view_content 0x7f090025
 int id always 0x7f09000b
 int id beginning 0x7f090011
@@ -405,7 +406,6 @@ int id lblText 0x7f090051
 int id lblTitle 0x7f09005a
 int id listMode 0x7f090001
 int id list_item 0x7f090029
-int id login 0x7f090040
 int id middle 0x7f090012
 int id never 0x7f090009
 int id none 0x7f090010
@@ -437,7 +437,9 @@ int id showCustom 0x7f090007
 int id showHome 0x7f090004
 int id showTitle 0x7f090006
 int id signup 0x7f090047
+int id spinner1 0x7f090063
 int id split_action_bar 0x7f09001e
+int id submit 0x7f090040
 int id submit_area 0x7f090039
 int id tab1 0x7f09003c
 int id tab2 0x7f090041
@@ -445,7 +447,8 @@ int id tabMode 0x7f090002
 int id tableRow1 0x7f090052
 int id tableRow2 0x7f090055
 int id tableRow3 0x7f090060
-int id tableRow4 0x7f090062
+int id tableRow4 0x7f090064
+int id tableRow5 0x7f090062
 int id thumbnailOneTest 0x7f090058
 int id title 0x7f09002b
 int id top_action_bar 0x7f090020

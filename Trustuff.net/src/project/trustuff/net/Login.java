@@ -33,7 +33,7 @@ public class Login extends ActionBarActivity implements OnClickListener {
 
 
 		
-		btn_login = (BootstrapButton) findViewById(R.id.login);
+		btn_login = (BootstrapButton) findViewById(R.id.submit);
         btn_signup = (BootstrapButton) findViewById(R.id.signup);
         
         uname = (EditText) findViewById(R.id.username);
@@ -100,7 +100,7 @@ public class Login extends ActionBarActivity implements OnClickListener {
         // TODO Auto-generated method stub
         switch(v.getId()) {
 
-            case R.id.login :
+            case R.id.submit :
             	if(uname.toString() != null && password.toString() != null)
             	{
             	new LoginTask(Login.this, uname, password).execute();break;

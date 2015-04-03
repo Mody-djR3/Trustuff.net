@@ -10,10 +10,10 @@
 
     <ImageView
         android:id="@+id/upImage"
-        android:layout_width="160dp"
-        android:layout_height="160dp"
+        android:layout_width="156dp"
+        android:layout_height="144dp"
         android:layout_gravity="center"
-        android:background="@drawable/trustuff_logo" />
+        android:background="@drawable/upload_icon" />
 
     <TableLayout
         android:layout_width="match_parent"
@@ -85,6 +85,17 @@
         </TableRow>
 
         <TableRow
+            android:id="@+id/tableRow5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" >
+
+            <Spinner
+                android:id="@+id/spinner1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </TableRow>
+
+        <TableRow
             android:id="@+id/tableRow4"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -92,7 +103,7 @@
             android:gravity="center" >
 
             <com.beardedhen.androidbootstrap.BootstrapButton
-                android:id="@+id/login"
+                android:id="@+id/submit"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
@@ -101,6 +112,7 @@
                 bootstrapbutton:bb_icon_left="fa-upload"
                 bootstrapbutton:bb_type="warning" />
         </TableRow>
+
     </TableLayout>
 
 </LinearLayout>

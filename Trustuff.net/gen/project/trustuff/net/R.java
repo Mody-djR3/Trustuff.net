@@ -1334,7 +1334,8 @@ containing a value of this type.
         public static final int thumbnail_circle_container=0x7f020080;
         public static final int thumbnail_circle_minimal=0x7f020081;
         public static final int trustuff_logo=0x7f020082;
-        public static final int upload_photo_icon=0x7f020083;
+        public static final int upload_icon=0x7f020083;
+        public static final int upload_photo_icon=0x7f020084;
     }
     public static final class id {
         public static final int action_bar=0x7f09001c;
@@ -1348,7 +1349,7 @@ containing a value of this type.
         public static final int action_menu_divider=0x7f090016;
         public static final int action_menu_presenter=0x7f090017;
         public static final int action_mode_close_button=0x7f090024;
-        public static final int action_settings=0x7f090063;
+        public static final int action_settings=0x7f090065;
         public static final int activity_chooser_view_content=0x7f090025;
         public static final int always=0x7f09000b;
         public static final int beginning=0x7f090011;
@@ -1387,7 +1388,6 @@ containing a value of this type.
         public static final int lblTitle=0x7f09005a;
         public static final int listMode=0x7f090001;
         public static final int list_item=0x7f090029;
-        public static final int login=0x7f090040;
         public static final int middle=0x7f090012;
         public static final int never=0x7f090009;
         public static final int none=0x7f090010;
@@ -1419,7 +1419,9 @@ containing a value of this type.
         public static final int showHome=0x7f090004;
         public static final int showTitle=0x7f090006;
         public static final int signup=0x7f090047;
+        public static final int spinner1=0x7f090063;
         public static final int split_action_bar=0x7f09001e;
+        public static final int submit=0x7f090040;
         public static final int submit_area=0x7f090039;
         public static final int tab1=0x7f09003c;
         public static final int tab2=0x7f090041;
@@ -1427,7 +1429,8 @@ containing a value of this type.
         public static final int tableRow1=0x7f090052;
         public static final int tableRow2=0x7f090055;
         public static final int tableRow3=0x7f090060;
-        public static final int tableRow4=0x7f090062;
+        public static final int tableRow4=0x7f090064;
+        public static final int tableRow5=0x7f090062;
         public static final int thumbnailOneTest=0x7f090058;
         public static final int title=0x7f09002b;
         public static final int top_action_bar=0x7f090020;

@@ -1,20 +1,26 @@
 package project.trustuff.net;
 
+import java.io.ByteArrayOutputStream;
+
+import org.apache.http.message.BasicNameValuePair;
+
 import android.content.Intent;
 import android.database.Cursor;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
-import android.graphics.drawable.BitmapDrawable;
-import android.graphics.drawable.Drawable;
 import android.net.Uri;
 import android.os.Bundle;
 import android.provider.MediaStore;
 import android.support.v4.app.Fragment;
+import android.util.Base64;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.view.ViewGroup;
+import android.widget.EditText;
 import android.widget.ImageView;
+
+import com.beardedhen.androidbootstrap.BootstrapButton;
 
 
 public class Sell extends Fragment implements OnClickListener {
@@ -22,6 +28,9 @@ public class Sell extends Fragment implements OnClickListener {
 	private static final int SELECT_PICTURE = 1;
 	ImageView uploadImg;
 	View rootView;
+	BootstrapButton sellSubmit;
+	EditText title, description, price;
+	String imgStr;
 	
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -29,11 +38,17 @@ public class Sell extends Fragment implements OnClickListener {
 
     	
          rootView = inflater.inflate(R.layout.sell, container, false);
-       
+         sellSubmit = (BootstrapButton) rootView.findViewById(R.id.submit);
+         
+         title = (EditText)  rootView.findViewById(R.id.title);
+         description = (EditText)  rootView.findViewById(R.id.description);
+         price = (EditText)  rootView.findViewById(R.id.price);
        
        uploadImg = (ImageView) rootView.findViewById(R.id.upImage);
         
         uploadImg.setOnClickListener(this);
+        sellSubmit.setOnClickListener(this);
+       
         return rootView;
     }
     
@@ -63,7 +78,8 @@ public class Sell extends Fragment implements OnClickListener {
 
             		break;
             		
-            case R.id.signup :
+            case R.id.submit:
+            	new SellTask(rootView.getContext(), title, description, "cars", price, imgStr, " Moe ").execute();
             	break;
           
         	}    
@@ -104,12 +120,17 @@ public class Sell extends Fragment implements OnClickListener {
 	
 	
 	private void setPic(String imagePath, ImageView destination) {
+		
+        
+
+		
 	    int targetW = destination.getWidth();
 	    int targetH = destination.getHeight();
 	    // Get the dimensions of the bitmap
 	    BitmapFactory.Options bmOptions = new BitmapFactory.Options();
 	    bmOptions.inJustDecodeBounds = true;
 	    BitmapFactory.decodeFile(imagePath, bmOptions);
+	   
 	    int photoW = bmOptions.outWidth;
 	    int photoH = bmOptions.outHeight;
 
@@ -122,7 +143,16 @@ public class Sell extends Fragment implements OnClickListener {
 	    bmOptions.inPurgeable = true;
 
 	    Bitmap bitmap = BitmapFactory.decodeFile(imagePath, bmOptions);
+	    
 	    destination.setImageBitmap(bitmap);
+	    
+        //img_Photo.setImageBitmap(bitmap);
+        ByteArrayOutputStream stream = new ByteArrayOutputStream();
+        bitmap.compress(Bitmap.CompressFormat.PNG, 90, stream); //compress to which format you want.
+        byte [] byte_arr = stream.toByteArray();
+        imgStr= Base64.encodeToString(byte_arr, 1);
+
+       
 	}
 	
 
