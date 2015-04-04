@@ -4,6 +4,8 @@ import java.io.ByteArrayOutputStream;
 
 import org.apache.http.message.BasicNameValuePair;
 
+import android.app.Activity;
+import android.content.Context;
 import android.content.Intent;
 import android.database.Cursor;
 import android.graphics.Bitmap;
@@ -31,12 +33,15 @@ public class Sell extends Fragment implements OnClickListener {
 	BootstrapButton sellSubmit;
 	EditText title, description, price;
 	String imgStr;
+	String value;
+	Context context;
+	Bitmap bitmap;
 	
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
             Bundle savedInstanceState) {
 
-    	
+    
          rootView = inflater.inflate(R.layout.sell, container, false);
          sellSubmit = (BootstrapButton) rootView.findViewById(R.id.submit);
          
@@ -45,6 +50,7 @@ public class Sell extends Fragment implements OnClickListener {
          price = (EditText)  rootView.findViewById(R.id.price);
        
        uploadImg = (ImageView) rootView.findViewById(R.id.upImage);
+       value = getActivity().getIntent().getStringExtra("USER_NAME");
         
         uploadImg.setOnClickListener(this);
         sellSubmit.setOnClickListener(this);
@@ -79,7 +85,7 @@ public class Sell extends Fragment implements OnClickListener {
             		break;
             		
             case R.id.submit:
-            	new SellTask(rootView.getContext(), title, description, "cars", price, imgStr, " Moe ").execute();
+            	new SellTask(rootView.getContext(), title, description, "cars", price, imgStr, value).execute();
             	break;
           
         	}    
@@ -142,17 +148,19 @@ public class Sell extends Fragment implements OnClickListener {
 	    bmOptions.inSampleSize = scaleFactor;
 	    bmOptions.inPurgeable = true;
 
-	    Bitmap bitmap = BitmapFactory.decodeFile(imagePath, bmOptions);
+	    bitmap = BitmapFactory.decodeFile(imagePath, bmOptions);
 	    
 	    destination.setImageBitmap(bitmap);
-	    
-        //img_Photo.setImageBitmap(bitmap);
-        ByteArrayOutputStream stream = new ByteArrayOutputStream();
-        bitmap.compress(Bitmap.CompressFormat.PNG, 90, stream); //compress to which format you want.
-        byte [] byte_arr = stream.toByteArray();
-        imgStr= Base64.encodeToString(byte_arr, 1);
+        
+        new Thread(new Runnable() {
+            public void run() {
 
-       
+                ByteArrayOutputStream stream = new ByteArrayOutputStream();
+                bitmap.compress(Bitmap.CompressFormat.PNG, 90, stream); //compress to which format you want.
+                byte [] byte_arr = stream.toByteArray();
+                imgStr= Base64.encodeToString(byte_arr, 1);
+            }
+        }).start();
 	}
 	
 

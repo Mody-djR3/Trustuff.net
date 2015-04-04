@@ -40,7 +40,6 @@ public class SellTask  extends AsyncTask<String, String, Void>{
 		this.imgUrl = imgUrl;
 		this.name = name;
 		
-		 
 	}
 	
 	

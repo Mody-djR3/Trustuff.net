@@ -33,6 +33,7 @@ public class LoginTask extends AsyncTask<String, String, Void>
 	Intent intent;
     InputStream is = null ;
     String result = "";
+    String sUname;
 	
 	public LoginTask(Context context, EditText uname, EditText password)
 	{
@@ -40,10 +41,14 @@ public class LoginTask extends AsyncTask<String, String, Void>
 		progressDialog = new ProgressDialog(context);
 		this.uname = uname;
 		this.password = password;
+		sUname = uname.getText().toString();
 		
-		 intent = new Intent(context, MainActivity.class);
+		intent = new Intent(context, MainActivity.class);
+     	intent.putExtra("USER_NAME" ,sUname);
+
 	}
 	
+
 	
 
     public void onPreExecute() {

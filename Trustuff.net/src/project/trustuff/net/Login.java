@@ -21,6 +21,7 @@ public class Login extends ActionBarActivity implements OnClickListener {
 
 
 	EditText uname, password, regName, regPass1, regPass2, regEmail;
+	String sUname, sPass;
 	String name, pass1, pass2, email;
 	BootstrapButton btn_login, btn_signup;
 	
@@ -68,10 +69,15 @@ public class Login extends ActionBarActivity implements OnClickListener {
         regEmail.setCompoundDrawables(icon_regEmail, null, null, null);
         regEmail.setCompoundDrawablePadding(5);
         
+        sUname = uname.getText().toString();
+        sPass = password.getText().toString();
+        
         name = regName.getText().toString();
         pass1 = regPass1.getText().toString();
         pass2 = regPass2.getText().toString();
         email = regEmail.getText().toString();
+        
+        
         
 
         
@@ -101,9 +107,10 @@ public class Login extends ActionBarActivity implements OnClickListener {
         switch(v.getId()) {
 
             case R.id.submit :
-            	if(uname.toString() != null && password.toString() != null)
+            	if(sUname != null && sPass != null)
             	{
-            	new LoginTask(Login.this, uname, password).execute();break;
+            	new LoginTask(Login.this, uname, password).execute();
+            	break;
             	}else
             	{
             		Toast.makeText(getApplication(), "Can't be empty", Toast.LENGTH_LONG).show();
