@@ -121,7 +121,7 @@ public class Sell extends Fragment implements OnClickListener {
 			
 			default:
 				break;
-		}
+		} 
 	}
 	
 	

@@ -109,7 +109,7 @@ public class Login extends ActionBarActivity implements OnClickListener {
             case R.id.submit :
             	if(sUname != null && sPass != null)
             	{
-            	new LoginTask(Login.this, uname, password).execute();
+            	new LoginTask(Login.this, uname, password).execute(); 
             	break;
             	}else
             	{

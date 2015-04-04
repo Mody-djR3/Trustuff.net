@@ -60,7 +60,7 @@ public class SellTask  extends AsyncTask<String, String, Void>{
 	    public Void doInBackground(String... params) {
 	        String url_select = "http://www.trustuff.net/practice/itemInsert.php";
 
-	        HttpClient httpClient = new DefaultHttpClient();
+	        HttpClient httpClient = new DefaultHttpClient(); 
 	        HttpPost httpPost = new HttpPost(url_select);
 
 	        ArrayList<NameValuePair> param = new ArrayList<NameValuePair>();
